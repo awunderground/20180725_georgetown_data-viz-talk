@@ -1,0 +1,31 @@
+---
+output: pdf_document
+urlcolor: blue
+---
+
+# Best Practices and Strategies to Create Effective Visualizations
+
+## Class resources
+
+* [Class slides](https://github.com/awunderground/20180725_georgetown_data-viz-talk)
+
+## R Resources
+
+* [R for Data Science](http://r4ds.had.co.nz/) by Garrett Grolemund and Hadley Wickham
+* [RStudio Webinars](https://www.rstudio.com/resources/webinars/)
+* [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+
+## Urban Institute Resources
+
+* [urbnmapr](https://github.com/UrbanInstitute/urbnmapr): Easy state and county choropleths in R
+* [urbnthemes](https://github.com/UI-Research/urbnthemes): Urban Institute ggplot2 theme
+* [R Programming at the Urban Institute website](https://ui-research.github.io/r-at-urban/graphics-guide.html)
+* [Data@Urban](https://medium.com/@urban_institute)
+
+## Twitter
+
+* Jon Schwabish (@jschwabish)
+* Hadley Wickham (@hadleywickham)
+* Mara Averick (@dataandme)
+* Yihui Xie (@xieyihui)
+* Leonard Kiefer (@lenkiefer)
