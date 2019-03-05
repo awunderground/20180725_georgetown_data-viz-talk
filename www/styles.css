@@ -61,8 +61,16 @@ img[alt=arrangement] {
   height: 500px;
 }
 
+img[alt=houston] {
+  height: 450px;
+}
+
 img[alt=stop] {
   height: 350px;
+}
+
+img[alt=frontier] {
+  height: 500px;
 }
 
 .twitter-tweet {

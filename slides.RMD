@@ -28,19 +28,27 @@ library(urbnmapr)
 
 ## Best Practices and Strategies to Create Effective Visualizations
 
-#### Aaron Williams
+#### Aaron R. Williams
 #### @awunderground
 
 ![urban-logo](www/images/urban-institute-logo.png)
 
 ## ~~Best Practices and Strategies to Create Effective Visualizations~~
 
-### Why I Love R
+### Why I Use R
 
 #### Aaron Williams
 #### @awunderground
 
 ![urban-logo](www/images/urban-institute-logo.png)
+
+## Outline
+
+1) WHY: Principles for selecting a data viz tool
+2) WHAT: R and ggplot2
+3) HOW: The theory behind R and ggplot2
+4) Examples
+5) Grade my decision
 
 # WHY: Principles for selecting a data viz tool
 
@@ -50,7 +58,7 @@ library(urbnmapr)
 
 *Source: [fivethirtyeight](https://fivethirtyeight.com/features/the-52-best-and-weirdest-charts-we-made-in-2016/)*
 
-## 2. Flexible
+## 2. Flexible and expressive
 
 ## 3. Reproducible
 
@@ -92,6 +100,10 @@ AKA "Please just don't make me point-and-click 100 charts"
 ## BBC
 
 <iframe class="stretch" data-src="https://www.bbc.com/news/health-43726436"></iframe>
+
+## BBC R Cookbook
+
+<iframe class="stretch" data-src="https://bbc.github.io/rcookbook/"></iframe>
 
 # HOW: Grammar of Graphics
 
@@ -156,8 +168,9 @@ Size
 ```{r fig.height = 1.5}
 recent_storms %>%
   ggplot(aes(pressure, 1, size = wind)) +
-  geom_point(alpha = 0.5) +
+  ggplot2::geom_point(alpha = 0.5) +
   scale_y_continuous(breaks = 0) +
+	scale_radius(range = c(1, 10)) +
   labs(y = NULL) +
   theme_bw() +
   theme(panel.border = ggplot2::element_blank())
@@ -179,7 +192,7 @@ Others: transparency, animations, faceting
 
 ## 3. Geometric objects
 
-Plots are often referred to by the name of their geometric object(s). 
+*Plots are often called their geometric object(s).*
 
 Bar
 
@@ -296,7 +309,7 @@ Before
 
 `scale_size_continuous(breaks = c(25, 75, 125))`
 
-```{r fig.height = 2}
+```{r fig.height = 1.5}
 recent_storms50 %>%
   ggplot(aes(pressure, 1, size = wind)) +
   geom_point(alpha = 0.5) +
@@ -312,7 +325,7 @@ After
 
 `scale_size_continuous(range = c(0.5, 20), breaks = c(25, 75, 125))`
 
-```{r fig.height = 2}
+```{r fig.height = 1.5}
 recent_storms50 %>%
   ggplot(aes(pressure, 1, size = wind)) +
   geom_point(alpha = 0.5) +
@@ -415,12 +428,15 @@ recent_storms50 %>%
 urbnthemes
 
 ```{r}
+set_urbn_defaults(style = "print")
+
 recent_storms50 %>%
   ggplot(aes(pressure, wind)) +
   geom_point(color = "#1696d2") +
+	scale_x_continuous(limits = c(920, 1020), expand = c(0, 0), breaks = c(920, 940, 960, 980, 1000, 1020)) +
   scale_y_continuous(limits = c(0, 160), expand = c(0, 0)) +  
   labs(title = "Low pressure storms have higher wind speeds") +
-  theme_urbn_print()
+	scatter_grid()
 ```
 
 ## Coding example
@@ -433,9 +449,21 @@ recent_storms50 %>%
 
 ## New? 9. Arrangements
 
+![arrangement](www/images/schwabish.png)
+
+*Source: Policyviz by Jon Schwabish*
+
+## New? 9. Arrangements
+
 Animation
 
-## New? Interactivity
+![houston](www/images/houston-fq.gif)
+
+*By Sarah Strochak*
+
+## 10. Interactivity?
+
+![frontier](www/images/frontier.jpg)
 
 # Examples
 
@@ -454,11 +482,15 @@ statedata %>%
 
 ## Pension code
 
-*In directory*
+<iframe class="stretch" data-src="07_cleanpension-validation.html"></iframe>
+
+3.2, 4.2, 4.3, 4.7, 5.12
 
 ## R Shiny
 
 <iframe class="stretch" data-src=https://www.urban.org/policy-centers/cross-center-initiatives/program-retirement-policy/projects/dynasim-visualizing-older-americans-future-well-being/fiscal-health-social-security"></iframe>
+
+https://www.urban.org/policy-centers/cross-center-initiatives/program-retirement-policy/projects/dynasim-visualizing-older-americans-future-well-being/fiscal-health-social-security
 
 ## Graphics guide
 
@@ -470,7 +502,7 @@ statedata %>%
 
 A
 
-## 2. Flexible
+## 2. Flexible and expressive
 
 B
 

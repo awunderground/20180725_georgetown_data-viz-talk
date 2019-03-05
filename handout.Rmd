@@ -5,6 +5,12 @@ urlcolor: blue
 
 # Best Practices and Strategies to Create Effective Visualizations
 
+Aaron R. Williams
+
+Urban Institute
+
+Data Scientist
+
 ## Class resources
 
 * [Class slides](https://github.com/awunderground/20180725_georgetown_data-viz-talk)
@@ -14,14 +20,19 @@ urlcolor: blue
 * [R for Data Science](http://r4ds.had.co.nz/) by Garrett Grolemund and Hadley Wickham
 * [RStudio Webinars](https://www.rstudio.com/resources/webinars/)
 * [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+* [My ggplot2 examples](https://awunderground.github.io/ggplot2-themes/)
 
 ## Urban Institute Resources
 
+* [Urban Institute Dataviz Style Guide](http://urbaninstitute.github.io/graphics-styleguide/)
+* [R Programming at the Urban Institute website](https://ui-research.github.io/r-at-urban/graphics-guide.html)
 * [urbnmapr](https://github.com/UrbanInstitute/urbnmapr): Easy state and county choropleths in R
 * [urbnthemes](https://github.com/UI-Research/urbnthemes): Urban Institute ggplot2 theme
-* [R Programming at the Urban Institute website](https://ui-research.github.io/r-at-urban/graphics-guide.html)
 * [Data@Urban](https://medium.com/@urban_institute)
-
+	* [Why The Urban Institute Visualizes Data with ggplot2](https://medium.com/@urban_institute/why-the-urban-institute-visualizes-data-with-ggplot2-46d8cfc7ee67)
+	* [How to Create State and County Maps Easily in R](https://medium.com/@urban_institute/how-to-create-state-and-county-maps-easily-in-r-577d29300bb2)
+	* [What is Data Science @ the Urban Institute?](https://medium.com/@urban_institute/what-is-data-science-the-urban-institute-b5e4b3ff9cc2)
+		
 ## Twitter
 
 * Jon Schwabish (@jschwabish)
@@ -29,3 +40,4 @@ urlcolor: blue
 * Mara Averick (@dataandme)
 * Yihui Xie (@xieyihui)
 * Leonard Kiefer (@lenkiefer)
+* Jenny Bryan (@JennyBryan)
