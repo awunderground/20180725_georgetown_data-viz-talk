@@ -42,6 +42,14 @@ library(urbnmapr)
 
 ![urban-logo](www/images/urban-institute-logo.png)
 
+## DYNASIM
+
+<iframe class="stretch" data-src="https://www.urban.org/features/nine-charts-about-future-retirement"></iframe>
+
+## Synthetic Data
+
+![cart](www/images/CART.png)
+
 ## Outline
 
 1) WHY: Principles for selecting a data viz tool
@@ -194,7 +202,7 @@ Others: transparency, animations, faceting
 
 *Plots are often called their geometric object(s).*
 
-Bar
+`geom_bar()` or `geom_col()`
 
 ```{r}
 recent_storms %>%
@@ -204,17 +212,15 @@ recent_storms %>%
        subtitle = "Storms since 2006")
 ```
 
-`geom_bar()`
-
 ## 3. Geometric objects
 
-Line
+`geom_line()`
 
 ```{r}
 storms %>%
   count(name, year) %>%
   count(year) %>%
-  ggplot(aes(year, nn)) +
+  ggplot(aes(year, n)) +
   geom_line() +
   scale_x_continuous(limits = c(1970, 2020)) +
   scale_y_continuous(limits = c(0, NA)) +
@@ -223,11 +229,9 @@ storms %>%
        y = "Count")
 ```
 
-`geom_line()`
-
 ## 3. Geometric objects
 
-Point
+`geom_point()`
 
 ```{r}
 recent_storms <- filter(storms, year > 2005)
@@ -242,8 +246,6 @@ recent_storms %>%
   labs(title = "Low pressure storms have higher wind speeds",
        subtitle = "Storms since 2006")
 ```
-
-`geom_point()`
 
 ## 3. Geometric objects
 
@@ -312,7 +314,7 @@ Before
 ```{r fig.height = 1.5}
 recent_storms50 %>%
   ggplot(aes(pressure, 1, size = wind)) +
-  geom_point(alpha = 0.5) +
+  ggplot2::geom_point(alpha = 0.5) +
   scale_size_continuous(breaks = c(25, 75, 125)) +  
   scale_y_continuous(breaks = 0) +
   labs(y = NULL) +
@@ -328,7 +330,7 @@ After
 ```{r fig.height = 1.5}
 recent_storms50 %>%
   ggplot(aes(pressure, 1, size = wind)) +
-  geom_point(alpha = 0.5) +
+  ggplot2::geom_point(alpha = 0.5) +
   scale_size_continuous(range = c(0.5, 20),
                         breaks = c(25, 75, 125)) +
   scale_y_continuous(breaks = 0) +
@@ -372,7 +374,7 @@ recent_storms %>%
   ggplot(aes(long, lat, group = name)) +
   geom_polygon(data = states, aes(long, lat, group = group),
                fill = "grey", color = "#ffffff", size = 0.05) +
-  geom_path() +
+  geom_path(alpha = 0.3, size = 0.5, color = "#1696d2") +
   facet_wrap(~category) +
   coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
   theme_urbn_map()
@@ -388,7 +390,7 @@ Facet grid
 storms %>%
   filter(month %in% c(6, 7, 8)) %>%
   ggplot(aes(pressure, wind)) +
-  geom_point() +
+  geom_point(alpha = 0.2) +
   facet_grid(month~status)
 ```
 
@@ -494,7 +496,7 @@ https://www.urban.org/policy-centers/cross-center-initiatives/program-retirement
 
 ## Graphics guide
 
-<iframe class="stretch" data-src="https://ui-research.github.io/r-at-urban/graphics-guide.html"></iframe>
+<iframe class="stretch" data-src="https://UrbanInstitute.github.io/r-at-urban/graphics-guide.html"></iframe>
 
 # Strengths and Weaknesses
 
