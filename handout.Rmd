@@ -3,7 +3,7 @@ output: pdf_document
 urlcolor: blue
 ---
 
-# Best Practices and Strategies to Create Effective Visualizations
+# Best Practices and Strategies for Effective Data Visualizations
 
 Aaron R. Williams
 
@@ -25,9 +25,9 @@ Data Scientist
 ## Urban Institute Resources
 
 * [Urban Institute Dataviz Style Guide](http://urbaninstitute.github.io/graphics-styleguide/)
-* [R Programming at the Urban Institute website](https://ui-research.github.io/r-at-urban/graphics-guide.html)
+* [R Programming at the Urban Institute website](https://urbaninstitute.github.io/r-at-urban/graphics-guide.html)
 * [urbnmapr](https://github.com/UrbanInstitute/urbnmapr): Easy state and county choropleths in R
-* [urbnthemes](https://github.com/UI-Research/urbnthemes): Urban Institute ggplot2 theme
+* [urbnthemes](https://github.com/urbaninstitute/urbnthemes): Urban Institute ggplot2 theme
 * [Data@Urban](https://medium.com/@urban_institute)
 	* [Why The Urban Institute Visualizes Data with ggplot2](https://medium.com/@urban_institute/why-the-urban-institute-visualizes-data-with-ggplot2-46d8cfc7ee67)
 	* [How to Create State and County Maps Easily in R](https://medium.com/@urban_institute/how-to-create-state-and-county-maps-easily-in-r-577d29300bb2)
